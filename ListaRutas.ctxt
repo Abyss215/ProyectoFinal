@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=ListaRutas
+comment1.params=
+comment1.target=ListaRutas()
+comment2.params=
+comment2.target=java.util.Vector\ getLista()
+comment3.params=r
+comment3.target=void\ agregarRuta(Ruta)
+comment4.params=r
+comment4.target=void\ eliminarRuta(Ruta)
+numComments=5

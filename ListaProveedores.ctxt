@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=ListaProveedores
+comment1.params=
+comment1.target=ListaProveedores()
+comment2.params=p
+comment2.target=void\ agregarProveedor(Proveedor)
+comment3.params=p
+comment3.target=void\ removerProveedor(Proveedor)
+comment4.params=
+comment4.target=java.util.Vector\ getLista()
+numComments=5

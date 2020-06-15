@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Esmaltador
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Esmaltador\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=nom\ suel
+comment1.target=Esmaltador(java.lang.String,\ double)
+comment2.params=c\ e\ pe\ cant
+comment2.target=void\ esmaltar(Cocida,\ Esmalte,\ Esmaltada,\ int)
+comment3.params=c\ p\ pe\ cant
+comment3.target=void\ decorar(Cocida,\ Pintura,\ Esmaltada,\ int)
+comment4.params=c\ e\ i\ cant
+comment4.target=void\ esmaltar(Cocida,\ Esmalte,\ Inventario,\ int)
+comment5.params=c\ p\ i\ cant
+comment5.target=void\ decorar(Cocida,\ Pintura,\ Inventario,\ int)
+numComments=6

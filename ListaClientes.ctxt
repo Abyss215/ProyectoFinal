@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=ListaClientes
+comment1.params=
+comment1.target=ListaClientes()
+comment2.params=clien
+comment2.target=void\ anadirCliente(Cliente)
+comment3.params=clien\ lr
+comment3.target=void\ eliminarCliente(Cliente,\ ListaRutas)
+comment4.params=
+comment4.target=java.util.Vector\ getLista()
+comment5.params=
+comment5.target=java.util.Vector\ obtenerClientesNombres()
+comment6.params=nom
+comment6.target=Cliente\ buscarCliente(java.lang.String)
+numComments=7

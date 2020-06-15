@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=MiException
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ MiExcepcion\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=mess
+comment1.target=MiException(java.lang.String)
+comment2.params=mess\ e
+comment2.target=MiException(java.lang.String,\ java.lang.Exception)
+numComments=3

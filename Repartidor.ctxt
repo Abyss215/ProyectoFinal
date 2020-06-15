@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Repartidor
+comment1.params=nom\ licen
+comment1.target=Repartidor(java.lang.String,\ java.lang.String)
+comment2.params=c\ p\ cant\ fecha\ code
+comment2.target=Venta\ vender(Cliente,\ Producto,\ int,\ java.lang.String,\ java.lang.String)
+comment3.params=r\ v\ fecha\ ordenes
+comment3.target=java.util.Vector\ diaVenta(Ruta,\ Vehiculo,\ java.lang.String,\ java.util.Vector[])
+comment4.params=
+comment4.target=int\ getPiezasVendidas()
+comment5.params=cant
+comment5.target=void\ setPiezasVendidas(int)
+numComments=6
