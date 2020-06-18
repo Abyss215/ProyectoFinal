@@ -1,8 +1,9 @@
 #BlueJ class context
 comment0.target=Gerente
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Gerente\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=nom
 comment1.target=Gerente(java.lang.String)
-comment2.params=fecha\ p\ cantidad\ is
-comment2.target=Compra\ comparInsumos(java.lang.String,\ Proveedor,\ int,\ Insumo)
-numComments=3
+comment2.params=fecha\ p\ is\ cantidad
+comment2.target=Compra\ comprarInsumos(java.lang.String,\ Proveedor,\ Insumo,\ int)
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4

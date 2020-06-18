@@ -5,8 +5,9 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
+import java.io.Serializable;
 import java.util.Vector;
-public class ListaRutas
+public class ListaRutas implements Serializable
 {
     private Vector<Ruta> lista=new Vector<Ruta>(1,1);
     

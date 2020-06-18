@@ -5,7 +5,8 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Terminado extends Producto
+import java.io.Serializable;
+public class Terminado extends Producto implements Serializable
 {
     private String color;
     private boolean brillo;

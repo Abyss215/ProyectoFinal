@@ -5,7 +5,8 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Proveedor
+import java.io.Serializable;
+public abstract class Proveedor implements Serializable
 {
     protected String id;
     protected String nombre;
@@ -20,4 +21,6 @@ public class Proveedor
     
     public void setNombre(String nom){nombre=nom;}
     public String getNombre(){return nombre;}
+    
+    public abstract String toString(); 
 }

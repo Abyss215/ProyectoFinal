@@ -5,7 +5,8 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Maestro extends Alfarero
+import java.io.Serializable;
+public class Maestro extends Alfarero implements Serializable
 {
     private String horario;
     
@@ -29,7 +30,7 @@ public class Maestro extends Alfarero
         }
     }
     
-    public void hacerPieza(Arcilla a,String tipo,int cant,Inventario i)throws Exception{
+    public Natural hacerPieza(Arcilla a,String tipo,int cant)throws Exception{
         int matPrim;
         if(tipo.contains("plato")){
             matPrim=400;
@@ -40,7 +41,11 @@ public class Maestro extends Alfarero
             throw new Exception("ya no hay Arcilla suficiente...produccion detenida");
         }else{
             a.setCantidad(a.getCantidad()-cant*matPrim);
-            i.agregarProducto(new Natural(tipo,cant));
+            return new Natural(tipo,cant);
         }
+    }
+    
+    public String toString(){
+        return "ID : "+id+"\n Nombre : "+nombre+"\n Sueldo : "+sueldo+"\n Horario : "+horario;
     }
 }

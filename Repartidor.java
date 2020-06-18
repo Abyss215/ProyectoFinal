@@ -5,8 +5,9 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
+import java.io.Serializable;
 import java.util.Vector;
-public class Repartidor extends Persona
+public class Repartidor extends Persona implements Serializable
 {
     private int piezasVendidas;
     private String licencia;
@@ -21,6 +22,8 @@ public class Repartidor extends Persona
             throw new MiException("Cantidad de Producto insuficiente....reasigne la cantidad");
         }else{
             p.setCantidad(p.getCantidad()-cant);
+            piezasVendidas+=cant;
+            
             return new Venta(fecha,c.getId(),p.getId(),id,cant,code);
         }
     }
@@ -39,6 +42,16 @@ public class Repartidor extends Persona
         return ventas;
     }
     
+    public int getPiezasV(){return piezasVendidas;}
+    
+    public void calcularSueldo(){
+        setSueldo(getPiezasV()*4);
+    }
+    
     public int getPiezasVendidas(){return piezasVendidas;}
     public void setPiezasVendidas(int cant){piezasVendidas=cant;}
+    
+    public String toString(){
+        return "ID : "+id+"\n Nombre : "+nombre+"\n Sueldo : "+sueldo+"\n Piezas vendidas : "+piezasVendidas+"\n Licencia "+licencia;
+    }
 }

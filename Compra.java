@@ -5,7 +5,8 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Compra
+import java.io.Serializable;
+public class Compra implements Serializable
 {
     private String fecha;
     private String idProveedor;

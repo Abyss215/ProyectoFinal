@@ -5,7 +5,8 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Persona
+import java.io.Serializable;
+public abstract class  Persona implements Serializable
 {
     protected String nombre;
     protected double sueldo;
@@ -28,4 +29,6 @@ public class Persona
     public String getNombre(){return nombre;}
     public double getSueldo(){return sueldo;}
     public String getId(){return id;}
+    
+    public abstract String toString();
 }

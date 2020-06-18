@@ -5,20 +5,24 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Empresa extends Proveedor 
+import java.io.Serializable;
+public class Empresa extends Proveedor  implements Serializable
 {
-    private Representante_legal repre;
+    private String repreID;
      
-    Empresa(String id,String nom,Representante_legal rep){
-        super("Empa"+id,nom);
-        repre=rep;
+    Empresa(String nom,String rep){
+        super("Empa"+nom.replace(' ','.'),nom);
+        repreID=rep;
     }
     
-    public void setRepresentante(Representante_legal rep){
-        repre=rep;
+    public void setRepresentante(String rep){
+        repreID=rep;
     }
     
-    public Representante_legal getRepresentante(){
-        return repre;
+    public String  getRepresentante(){
+        return repreID;
+    }
+    public String toString(){
+        return " ID : "+id+"\n Nombre : "+nombre+"\n Representante : "+repreID;
     }
 }

@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=Pintura
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Pintura\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=cant\ col\ preci
 comment1.target=Pintura(int,\ java.lang.String,\ double)
 comment2.params=

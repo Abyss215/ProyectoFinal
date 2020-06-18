@@ -5,8 +5,9 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
+import java.io.Serializable;
 import java.util.Vector;
-public class Vehiculo {
+public class Vehiculo  implements Serializable{
     private String placas;
     private String color;
     private int ocupado=0;

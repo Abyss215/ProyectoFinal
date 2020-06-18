@@ -5,7 +5,8 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Insumo
+import java.io.Serializable;
+public class Insumo implements Serializable
 {
     protected int cantidad;
     protected String id;

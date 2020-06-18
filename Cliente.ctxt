@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=Cliente
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Clientes\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=nom
 comment1.target=Cliente(java.lang.String)
 comment2.params=
@@ -11,4 +10,6 @@ comment4.params=code
 comment4.target=void\ setId(java.lang.String)
 comment5.params=nom
 comment5.target=void\ setNombre(java.lang.String)
-numComments=6
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7

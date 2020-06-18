@@ -1,10 +1,11 @@
 #BlueJ class context
 comment0.target=Empresa
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Empresa\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=id\ nom\ rep
-comment1.target=Empresa(java.lang.String,\ java.lang.String,\ Representante_legal)
+comment1.params=nom\ rep
+comment1.target=Empresa(java.lang.String,\ java.lang.String)
 comment2.params=rep
-comment2.target=void\ setRepresentante(Representante_legal)
+comment2.target=void\ setRepresentante(java.lang.String)
 comment3.params=
-comment3.target=Representante_legal\ getRepresentante()
-numComments=4
+comment3.target=java.lang.String\ getRepresentante()
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

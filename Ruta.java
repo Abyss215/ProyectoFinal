@@ -5,8 +5,9 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
+import java.io.Serializable;
 import java.util.Vector;
-public class Ruta
+public class Ruta implements Serializable
 {
     private Vector<Cliente> establecimientos=new Vector<Cliente>(1,1);
     private String nombre;

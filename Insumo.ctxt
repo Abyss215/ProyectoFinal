@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=Insumo
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Insumo\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=cant\ code\ preci
 comment1.target=Insumo(int,\ java.lang.String,\ double)
 comment2.params=

@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=Terminado
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Terminado\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=tipo\ cant\ col\ brill
 comment1.target=Terminado(java.lang.String,\ int,\ java.lang.String,\ boolean)
 comment2.params=tipo\ cant\ col

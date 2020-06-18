@@ -5,7 +5,8 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Cocinero extends Persona
+import java.io.Serializable;
+public class Cocinero extends Persona implements Serializable
 {
     private String horario;
     
@@ -24,16 +25,20 @@ public class Cocinero extends Persona
         t.setCantidad(t.getCantidad()+cant);
     }
     
-    public void cocinar(Natural n,Inventario i,int cant)  {
+    public Cocida cocinar(Natural n,int cant)  {
         n.setCantidad(n.getCantidad()-cant);
-        i.agregarProducto(new Cocida(n.getTipo(),cant));
+        return new Cocida(n.getTipo(),cant);
     }
     
-    public void cocinar(Esmaltada e,Inventario i,int cant)  {
+    public Terminado cocinar(Esmaltada e,int cant)  {
         e.setCantidad(e.getCantidad()-cant);
         if(e.getId().contains("Esma"))
-        i.agregarProducto(new Terminado(e.getTipo(),cant,e.getColor(),e.getBrillo()));
+        return new Terminado(e.getTipo(),cant,e.getColor(),e.getBrillo());
         else
-        i.agregarProducto(new Terminado(e.getTipo(),cant,e.getColor()));
+        return new Terminado(e.getTipo(),cant,e.getColor());
+    }
+    
+    public String toString(){
+        return " ID : "+id+"\n Nombre : "+nombre+"\n Sueldo : "+sueldo;
     }
 }

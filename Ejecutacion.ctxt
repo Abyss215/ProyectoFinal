@@ -2,4 +2,6 @@
 comment0.target=Ejecutacion
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
-numComments=2
+comment2.params=l\ d\ lPro\ rt\ lPer\ lCli\ lVeh\ lRut\ inv
+comment2.target=void\ play(Lectura,\ Data,\ ListaProveedores,\ RegistroTransacciones,\ ListaPersonas,\ ListaClientes,\ ListaVehiculos,\ ListaRutas,\ Inventario)
+numComments=3

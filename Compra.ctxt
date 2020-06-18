@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=Compra
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Compra\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=fec\ codeProv\ codeInsum\ cant\ precio
 comment1.target=Compra(java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ double)
 comment10.params=

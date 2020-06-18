@@ -5,8 +5,9 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
+import java.io.Serializable;
 import java.util.Vector;
-public class ListaClientes
+public class ListaClientes implements Serializable
 {
     private Vector<Cliente> lista=new Vector<Cliente>(1,1);
     
@@ -32,10 +33,25 @@ public class ListaClientes
         return v;
     }
     
-    public Cliente buscarCliente(String nom){
+    public Cliente buscarCliente(String nom)throws Exception{
+        Cliente c=null;
         for(int i=0;i<lista.size();i++){
-            if(lista.get(i).getNombre().equals(nom)) return lista.get(i);
+            if(lista.get(i).getNombre().equals(nom)) c= lista.get(i);
         }
-        return null;
+        if(c==null){
+            throw new MiException("no se a encontrado nada");
+        }else
+        return c;
+    }
+    
+    public Cliente buscarClienteID(String id)throws Exception{
+        Cliente c=null;
+        for(int i=0;i<lista.size();i++){
+            if(lista.get(i).getId().equals(id)) c= lista.get(i);
+        }
+        if(c==null){
+            throw new MiException("no se a encontrado nada");
+        }else
+        return c;
     }
 }

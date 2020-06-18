@@ -5,10 +5,14 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Representante_legal extends Persona
+import java.io.Serializable;
+public class Representante_legal extends Persona implements Serializable
 { 
     public Representante_legal(String nom){
         super(nom,"Repre"+nom.replace(' ','_'));
     }
     
+    public String toString(){
+        return "ID : "+id+"\n Nombre : "+nombre;
+    }
 }

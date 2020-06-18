@@ -5,30 +5,48 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
 public class Data
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Data
-     */
-    public Data()
-    {
-        // initialise instance variables
-        x = 0;
+    
+    public Data(){
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    
+    public Object leerDato(String ruta)throws Exception{
+        File data = new File(ruta); 
+        Object o=null;
+        if(!data.exists()){
+            data.createNewFile();
+            throw new Cancelar("no abrir");
+        }
+        try{
+                FileInputStream leerAr= new FileInputStream(data);
+                ObjectInputStream leer= new ObjectInputStream(leerAr);
+                o = leer.readObject();
+                leer.close();
+        }catch(Exception e){
+            e.printStackTrace();
+            return o;
+        }
+        return o;
+    }
+    
+    public void guardarDato(String ruta,Object dato){
+        File data = new File(ruta); 
+        try{
+            if(!data.exists()){
+                data.createNewFile();
+            }
+            FileOutputStream escriAr= new FileOutputStream(data);
+            ObjectOutputStream escri= new ObjectOutputStream(escriAr);
+            escri.writeObject(dato);
+            escri.close();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 }

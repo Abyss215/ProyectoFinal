@@ -12,4 +12,6 @@ comment5.params=
 comment5.target=java.util.Vector\ obtenerClientesNombres()
 comment6.params=nom
 comment6.target=Cliente\ buscarCliente(java.lang.String)
-numComments=7
+comment7.params=id
+comment7.target=Cliente\ buscarClienteID(java.lang.String)
+numComments=8

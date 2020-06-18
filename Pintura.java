@@ -5,7 +5,8 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Pintura extends Insumo
+import java.io.Serializable;
+public class Pintura extends Insumo implements Serializable
 {
     private String color;
     

@@ -5,12 +5,12 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Esmaltador extends Persona
+import java.io.Serializable;
+public class Esmaltador extends Persona implements Serializable
 {
-    private double sueldo;
-    public Esmaltador(String nom,double suel){
+    private int piezasH;
+    public Esmaltador(String nom){
         super(nom,"Esma"+nom.replace(' ','_'));
-        sueldo=suel;
     }
     
     public void esmaltar(Cocida c,Esmalte e,Esmaltada pe,int cant) throws Exception{
@@ -29,7 +29,7 @@ public class Esmaltador extends Persona
         }
     }
     
-    public void decorar(Cocida c,Pintura p,Esmaltada pe,int cant) throws Exception{
+    public void pintar(Cocida c,Pintura p,Esmaltada pe,int cant) throws Exception{
         int matPrim;
         if(c.getTipo().contains("plato")){
             matPrim=60;
@@ -45,7 +45,7 @@ public class Esmaltador extends Persona
         }
     }
     
-    public void esmaltar(Cocida c,Esmalte e,Inventario i,int cant) throws Exception{
+    public Esmaltada esmaltar(Cocida c,Esmalte e,int cant) throws Exception{
         int matPrim;
         if(c.getTipo().contains("plato")){
             matPrim=100;
@@ -57,11 +57,11 @@ public class Esmaltador extends Persona
         }else{
             e.setCantidad(e.getCantidad()-cant*matPrim);
             c.setCantidad(c.getCantidad()-cant);
-            i.agregarProducto(new Esmaltada(c.getTipo(),cant,e.getColor(),e.getBrillo()));
+            return new Esmaltada(c.getTipo(),cant,e.getColor(),e.getBrillo());
         }
     }
     
-    public void decorar(Cocida c,Pintura p,Inventario i,int cant) throws Exception{
+    public Esmaltada pintar(Cocida c,Pintura p,int cant) throws Exception{
         int matPrim;
         if(c.getTipo().contains("plato")){
             matPrim=60;
@@ -73,7 +73,17 @@ public class Esmaltador extends Persona
         }else{
             p.setCantidad(p.getCantidad()-cant*matPrim);
             c.setCantidad(c.getCantidad()-cant);
-            i.agregarProducto(new Esmaltada(c.getTipo(),cant,p.getColor()));
+            return new Esmaltada(c.getTipo(),cant,p.getColor());
         }
+    }
+    
+    public int getPiezasH(){return piezasH;}
+    
+    public void calcularSueldo(){
+        setSueldo(getPiezasH()*8);
+    }
+    
+    public String toString(){
+        return " ID : "+id+"\n Nombre : "+nombre+"\n Sueldo : "+sueldo+"\n Piezas hechas : "+piezasH;
     }
 }

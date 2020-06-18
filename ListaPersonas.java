@@ -5,8 +5,9 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
+import java.io.Serializable;
 import java.util.Vector;
-public class ListaPersonas
+public class ListaPersonas implements Serializable
 {
     private Vector[] lista=new Vector[6];
     
@@ -45,6 +46,19 @@ public class ListaPersonas
     public Vector<Gerente> getListaGerentes(){return lista[4];}
     public Vector<Representante_legal> getListaRepresentantes(){return lista[5];}
     
+    //vector completo con todo junto
+    public Vector<Persona> getPersonas(){
+        Vector<Persona> p=new Vector(1,1);
+        p.addAll(getListaGerentes());
+        p.addAll(getListaAlfareros());
+        p.addAll(getListaCocineros());
+        p.addAll(getListaEsmaltadores());
+        p.addAll(getListaRepartidores());
+        p.addAll(getListaRepresentantes());
+        return p;
+    }
+    
+    //eliminar
     public void eliminarPersonas(Alfarero a){
         lista[0].remove(a);
     }
@@ -64,6 +78,7 @@ public class ListaPersonas
         lista[5].remove(rl);
     }
     
+    ///obtener
     public Vector<Maestro> obtenerAlfareroMaestro(){
         Vector<Maestro> v=new Vector<Maestro>(1,1);
         Vector<Alfarero> g=lista[0];
@@ -80,8 +95,36 @@ public class ListaPersonas
         }
         return v;
     }
-    /////busquedas y filtro
     
+    /////busquedas y filtro
+    //nombre
+    public Persona buscarNombre(String nom)throws Exception{
+        Persona p=null;
+        for(int i=0;i<6||p!=null;i++){
+            for(int j=0;i<lista[i].size();j++){
+                if(((Persona)lista[i].get(j)).getNombre().equals(nom)) {p=(Persona)lista[i].get(j); break;}
+            }
+        }
+        if(p==null){
+            throw new MiException("no se a encontrado nada");
+        }else
+        return p;
+    }
+    
+    ///id
+    public Persona buscarId(String id)throws Exception{
+        Persona p=null;
+        for(int i=0;i<6||p!=null;i++){
+            for(int j=0;i<lista[i].size();j++){
+                if(((Persona)lista[i].get(j)).getId().equals(id)) {p=(Persona)lista[i].get(j); break;}
+            }
+        }
+        if(p==null){
+            throw new MiException("no se a encontrado nada");
+        }else
+        return p;
+    }
+    ///////
     //gerete
     public Vector<String> obtenerGerentesNombres(){
         Vector<String> v=new Vector<String>(1,1);
@@ -101,6 +144,23 @@ public class ListaPersonas
     }
     
     //alfarero
+    //Alfarero
+    public Vector<String> obtenerAlfareroNombres(){
+        Vector<String> v=new Vector<String>(1,1);
+        Vector<Alfarero> g=getListaAlfareros();
+        for(int i=0;i<g.size();i++){
+            v.add(g.get(i).getNombre());
+        }
+        return v;
+    }
+    
+    public Alfarero buscarAlfarero(String nom){
+        Vector<Alfarero> p=getListaAlfareros();
+        for(int i=0;i<p.size();i++){
+            if(p.get(i).getNombre().equals(nom)) return p.get(i);
+        }
+        return null;
+    }
     //maestro
     public Vector<String> obtenerMaestrosNombres(){
         Vector<String> v=new Vector<String>(1,1);
@@ -208,6 +268,30 @@ public class ListaPersonas
             if(p.get(i).getNombre().equals(nom)) return p.get(i);
         }
         return null;
+    }
+    
+    
+    
+    ////toString
+    public String toString(){
+        String p="";
+        for(int i=0;i<6;i++){
+            for(int j=0;i<lista[i].size();j++){
+                p+=lista[i].get(j).toString()+"\n";
+            }
+            p+="\n";
+        }
+        return p;
+    }
+    public String toString(Vector v){
+        String p="";
+        for(int i=0;i<6;i++){
+            for(int j=0;i<v.size();j++){
+                p+=v.get(j).toString()+"\n";
+            }
+            p+="\n";
+        }
+        return p;
     }
 }
 

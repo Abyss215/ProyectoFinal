@@ -5,8 +5,9 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
+import java.io.Serializable;
 import java.util.Vector;
-public class RegistroTransacciones
+public class RegistroTransacciones implements Serializable
 {
     private Vector<Venta> listaVentas=new Vector<Venta>(1,1);
     private Vector<Compra> listaCompras=new Vector<Compra>(1,1);
@@ -140,5 +141,13 @@ public class RegistroTransacciones
             }
         }
         return c;
+    }
+    
+    public String toString(Vector v){
+        String s="";
+        for(int i=0;i<v.size();i++){
+            s+=v.get(i).toString()+"\n\t----------\n";
+        }
+        return s;
     }
 }

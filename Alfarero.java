@@ -5,7 +5,8 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public abstract class Alfarero extends Persona
+import java.io.Serializable;
+public abstract class Alfarero extends Persona implements Serializable
 {
     public Alfarero(String nom,double suel,String code){
         super(nom,suel,"Alfa"+code);
@@ -15,5 +16,5 @@ public abstract class Alfarero extends Persona
     }
     
     public abstract void hacerPieza(Arcilla a,Natural p,int cant) throws Exception;
-    public abstract void hacerPieza(Arcilla a,String tipo,int cant, Inventario i) throws Exception;
+    public abstract Natural hacerPieza(Arcilla a,String tipo,int cant) throws Exception;
 }
